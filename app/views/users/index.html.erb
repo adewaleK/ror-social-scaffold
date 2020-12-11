@@ -5,9 +5,26 @@
   <div class="users-details">
     <h3><%= user.name %></h3>
     <h3><%= link_to 'See Profile',  user_path(user), class: 'profile-user' %></h3>
+    <% if !friend_request_sent?(user) && !friend_request_received?(user)%>
     <%= link_to 'Invite to Friendship',  user_friendships_path(user.id), method: :post, class: 'request-btn' %>
+    <% end %>
   </div>
 <% end %>
 </div>
-<h3>Friends</h3>
+<div>
+<div>
+<h3>Pending Friends</h3>
+  <% @pending_requests.each do |pend| %>
+  <p><%= pend.name %></p>
+  <% end %>
+</div>
+<div>
+<h3>Friend Friends</h3>
+  <% @friend_requests.each do |req| %>
+    <p><%= req.name %></p>
+  <% end %>
+</div>
+</div>
+
+</div>
 </div>

@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'friendships/create'
+  # get 'friendships/create'
   root 'posts#index'
 
   devise_for :users
 
   #resources :users, only: [:index, :show]
   resources :users, only: %i[index show] do
-    resources :friendships, only: %i[create destroy]
+    resources :friendships, only: %i[create]
   end
   resources :posts, only: [:index, :create] do
     resources :comments, only: [:create]
