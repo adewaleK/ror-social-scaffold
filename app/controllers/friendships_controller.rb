@@ -15,25 +15,25 @@ class FriendshipsController < ApplicationController
     end
   end
 
-  def accept_friend
+  def accept
     @friendship = Friendship.find_by(sent_by_id: params[:user_id], sent_to_id: current_user.id, status: false)
     return unless @friendship
 
     @friendship.status = true
     if @friendship.save
-      flash[:success] = 'Friend Request Accepted!'
       @friendship2 = current_user.friend_sent.build(sent_to_id: params[:user_id], status: true)
       @friendship2.save
+      redirect_to users_path, notice: 'Friend Request Accepted!'
     else
       flash[:danger] = 'Friend Request could not be accepted!'
     end
   end
 
-  def decline_friend
+  def decline
     @friendship = Friendship.find_by(sent_by_id: params[:user_id], sent_to_id: current_user.id, status: false)
     return unless @friendship
 
     @friendship.destroy
-    flash[:success] = 'Friend Request Declined!'
+    redirect_to users_path, notice: 'Friend Request Denied!'
   end
 end

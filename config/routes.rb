@@ -7,7 +7,12 @@ Rails.application.routes.draw do
 
   #resources :users, only: [:index, :show]
   resources :users, only: %i[index show] do
-    resources :friendships, only: %i[create]
+    resources :friendships, only: %i[create] do
+      collection do
+        get 'accept'
+        get 'decline'
+      end
+    end
   end
   resources :posts, only: [:index, :create] do
     resources :comments, only: [:create]
