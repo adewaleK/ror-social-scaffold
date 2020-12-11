@@ -4,7 +4,7 @@
     <p><%= @user.email %></p>
     <% User.all.each do |user|%>
       <% if user != current_user %>
-      <%= render user %>
+        <%= render user %>
       <% end %>
     <% end %>
   </div>

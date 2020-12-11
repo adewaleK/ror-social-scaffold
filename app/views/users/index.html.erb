@@ -1,48 +1,47 @@
 
 <div class="other-users">
-<div class="others">
-<h3>Other Users</h3>
-<% @users.each do |user|%>
-  <%= render user %>
-<% end %>
-</div>
-<div>
-  <div>
-    <h3>Friends</h3>
-    <% if @friends.empty? %>
-      <p>No friends yet<p>
-    <% else %>
-      <% @friends.each do |friend| %>
-        <p><%= friend.name %></p>
-      <% end %>
+  <div class="others">
+    <h3>Other Users</h3>
+    <% @users.each do |user|%>
+      <%= render user %>
     <% end %>
   </div>
   <div>
-  <h3>Pending Friends</h3>
-  <% if @pending_requests.empty? %>
-    <p>No friends yet<p>
-  <% else %>
-    <% @pending_requests.each do |pend| %>
-      <p><%= pend.name %></p>
-    <% end %>
-  <% end %>
-  </div>
-  <div>
-  <h3>Friend Requests</h3>
-    <% if @friend_requests.empty? %>
-      <p>No friend requests yet<p>
-    <% else %>
-      <% @friend_requests.each do |req| %>
-        <p class="decision-btns">
-          <%= req.name %>
-          <%= link_to 'Accept', accept_user_friendships_path(req.id), class: 'request-btn' %>
-          <%= link_to 'Decline', decline_user_friendships_path(req.id), class: 'decline-btn' %>
-        </p>
+    <div>
+      <h3>Friends</h3>
+      <% if @friends.empty? %>
+        <p>No friends yet<p>
+      <% else %>
+        <% @friends.each do |friend| %>
+          <p><%= friend.name %></p>
+        <% end %>
       <% end %>
-     <% end %>
+    </div>
+    <div>
+      <h3>Pending Friends</h3>
+      <% if @pending_requests.empty? %>
+        <p>No friends yet<p>
+      <% else %>
+        <% @pending_requests.each do |pend| %>
+          <p><%= pend.name %></p>
+        <% end %>
+      <% end %>
+    </div>
+    <div>
+    <h3>Friend Requests</h3>
+      <% if @friend_requests.empty? %>
+        <p>No friend requests yet<p>
+      <% else %>
+        <% @friend_requests.each do |req| %>
+          <p class="decision-btns">
+            <%= req.name %>
+            <%= link_to 'Accept', accept_user_friendships_path(req.id), class: 'request-btn' %>
+            <%= link_to 'Decline', decline_user_friendships_path(req.id), class: 'decline-btn' %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+    </div>
   </div>
-  </div>
-</div>
-
 </div>
 
