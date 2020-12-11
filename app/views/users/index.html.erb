@@ -1,14 +1,9 @@
 
 <div class="other-users">
 <div class="others">
+<h3>Other Users</h3>
 <% @users.each do |user|%>
-  <div class="users-details">
-    <h3><%= user.name %></h3>
-    <h3><%= link_to 'See Profile',  user_path(user), class: 'profile-user' %></h3>
-    <% if !friend_request_sent?(user) && !friend_request_received?(user) && !is_friend?(user) %>
-    <%= link_to 'Invite to Friendship',  user_friendships_path(user.id), method: :post, class: 'request-btn' %>
-    <% end %>
-  </div>
+  <%= render user %>
 <% end %>
 </div>
 <div>

@@ -2,6 +2,11 @@
   <div>
     <h2><%= "Name: #{@user.name}" %></h2>
     <p><%= @user.email %></p>
+    <% User.all.each do |user|%>
+      <% if user != current_user %>
+      <%= render user %>
+      <% end %>
+    <% end %>
   </div>
   <article class="timeline">
     <h3>Recent posts:</h3>
