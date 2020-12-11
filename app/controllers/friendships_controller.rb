@@ -2,7 +2,7 @@ class FriendshipsController < ApplicationController
   include ApplicationHelper
 
   def create
-    return if current_user.id == params[:user_id] 
+    return if current_user.id == params[:user_id]
     return if friend_request_sent?(User.find(params[:user_id]))
     return if friend_request_received?(User.find(params[:user_id]))
 
