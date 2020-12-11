@@ -2,7 +2,10 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @users = User.all
+    @users = []
+    User.all.each do |user|
+      @users << user if user != current_user
+    end
     @friends = current_user.friends
     @pending_requests = current_user.pending_requests
     @friend_requests = current_user.received_requests
