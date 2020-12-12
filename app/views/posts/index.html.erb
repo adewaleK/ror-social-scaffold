@@ -10,8 +10,12 @@
   <h3>
     Recent posts
   </h3>
+  <% if @our_posts.empty? %>
+    <p>No posts yet<p>
+  <% else %>
   <ul class="posts">
     <%= render @our_posts %>
   </ul>
+  <% end %>
 </article>
 </div>
