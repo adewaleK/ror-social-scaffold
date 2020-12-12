@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before(:each) do
-    @user = User.new(name: 'James', email: 'mohammed002@gamil.com', password: '12345678')
+    @user = User.new(name: 'John', email: 'john@gamil.com', password: '12345678')
     @user.save
   end
 
@@ -20,7 +20,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'should be valid if name is not less than 5 characters' do
-      @user.name = 'Fahad'
+      @user.name = 'kelly'
       @user.save
       expect(@user).to be_valid
     end
