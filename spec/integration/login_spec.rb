@@ -14,7 +14,6 @@ RSpec.describe 'Log in', type: :feature do
     expect(page).to have_content('solo')
   end
 
-
   scenario 'Send friend request' do
     visit root_path
 

@@ -47,8 +47,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'capybara'
   gem 'rspec'
-  gem "capybara"
   gem 'selenium-webdriver'
 end
 

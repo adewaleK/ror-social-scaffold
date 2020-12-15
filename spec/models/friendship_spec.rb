@@ -17,9 +17,9 @@ RSpec.describe Friendship, type: :model do
   end
 
   describe '#association' do
-  let(:user1) { User.create(name: 'Jamezjaz', email: 'microverse@email.com', password: '1234567') }
-  let(:user2) { User.create(name: 'Chigozie', email: 'rails@email.com', password: '1234567') }
-  let(:friend1) { user1.friend_sent.create(sent_to: user2) }
+    let(:user1) { User.create(name: 'Jamezjaz', email: 'microverse@email.com', password: '1234567') }
+    let(:user2) { User.create(name: 'Chigozie', email: 'rails@email.com', password: '1234567') }
+    let(:friend1) { user1.friend_sent.create(sent_to: user2) }
 
     it 'frienship belongs to a user' do
       user1
