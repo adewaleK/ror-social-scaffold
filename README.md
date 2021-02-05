@@ -61,16 +61,11 @@ Open `http://localhost:3000/` in your browser.
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
-## Authors
+## Author
 👤 **Kamilu Adewale**
 * Github: [@KamiluAdewale](https://github.com/adewaleK)
 * Twitter: [@adewale_kamilu](https://twitter.com/adewale_kamilu)
 * Linkedin: [Adewale Kamilu](https://www.linkedin.com/in/kamilu-adewale-64ab73197/)
-
-👤 **Angel Benjamin Cussi callisaya**
-* Github: [@abcussi](https://github.com/abcussi)
-* Twitter: [@thecussi](https://twitter.com/thecussi)
-* Linkedin: [angel-cussi](https://www.linkedin.com/in/angel-cussi-1b2310174/)
 
 ## 🤝 Contributing
 
