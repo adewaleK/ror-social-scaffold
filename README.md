@@ -1,15 +1,11 @@
 # Scaffold for social media app with Ruby on Rails!
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students. This milestone specifially involves implementing mutual friendship more efficiently.
 
-## Built With!
+## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
 
 
 ## Getting Started
@@ -60,18 +56,16 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
-    rpsec --format documentation
+     Please run 'bundle exec rspec' to run unit/integrated test cases.
 ```
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
-### Deployment
-
-TBA
-
-## Authors
-
-TBA
+## Author
+👤 **Kamilu Adewale**
+* Github: [@KamiluAdewale](https://github.com/adewaleK)
+* Twitter: [@adewale_kamilu](https://twitter.com/adewale_kamilu)
+* Linkedin: [Adewale Kamilu](https://www.linkedin.com/in/kamilu-adewale-64ab73197/)
 
 ## 🤝 Contributing
 
@@ -82,12 +76,3 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
-

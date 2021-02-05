@@ -24,7 +24,10 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+  margin-bottom: 10px;
 }
+
+h4 { margin-right: 6px; }
 
 ul {
   list-style-type: none;
@@ -33,6 +36,10 @@ ul {
 a {
   text-decoration: none;
   color: $primary-color-text;
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 .nav {
@@ -104,6 +111,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin: 0 auto;
 
   label {
     display: none;
@@ -155,10 +163,6 @@ form {
       padding: 8px;
       background-color: $primary-color-light;
     }
-
-    input[type="checkbox"] {
-      width: fit-content;
-    }
   }
 
   .actions {
@@ -198,7 +202,7 @@ form {
 
 .timeline {
   width: 100%;
-  margin: 16px 0;
+  margin: 16px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -275,6 +279,49 @@ form {
   }
 }
 
+.other-users {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.post-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.users-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.request-btn {
+  background-color: $primary-color-dark;
+  padding: 5px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.decline-btn {
+  background-color: red;
+  padding: 5px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.decision-btns {
+  margin-bottom: 20px;
+}
+
 .users-section {
   width: 100%;
   margin: 10px;
@@ -292,9 +339,19 @@ form {
   }
 }
 
+.profile-user {
+  font-size: 0.8em;
+  margin: 0 10px 8px 10px;
+  color: $primary-color-dark;
+  border: 1px solid $primary-color-dark;
+  padding: 5px;
+  border-radius: 4px;
+}
+
 .user-section {
   width: 100%;
-  margin-left: 16px;
+  //margin-left: 16px;
+  margin: 0 auto;
 
   h2 {
     text-transform: capitalize;

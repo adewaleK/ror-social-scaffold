@@ -1,3 +1,4 @@
+<div class="post-wrapper">
 <%= form_for(@post) do |form| %>
   <%= form.label :content %>
   <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
@@ -9,7 +10,12 @@
   <h3>
     Recent posts
   </h3>
+  <% if @our_posts.empty? %>
+    <p>No posts yet<p>
+  <% else %>
   <ul class="posts">
-    <%= render @timeline_posts %>
+    <%= render @our_posts %>
   </ul>
+  <% end %>
 </article>
+</div>
